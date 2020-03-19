@@ -18,15 +18,6 @@ exports.max = function max (array) {
 }
 
 exports.avg = function avg (array) {
-  if (!array || array.length == 0) {
-    return 0;
-  }
-  else {
-    var sum = 0;
-    for (var i = 0, j = array.length; i < j; i++) {
-        sum += arr[i];
-    }
-    return sum / array.length;
-  }
+  return ((array && array.length && array.reduce((a, b) => a + b, 0) / array.length) || 0);
     
 }
